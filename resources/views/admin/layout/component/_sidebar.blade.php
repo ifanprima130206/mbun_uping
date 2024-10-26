@@ -3,7 +3,7 @@
         <div class="sidenav-menu">
             <div class="nav accordion" id="accordionSidenav">
                 <div class="sidenav-menu-heading">Dasbor</div>
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="{{ route('dashboard.index') }}">
                     <div class="nav-link-icon"><i data-feather="grid"></i></div>
                     Ikhtisar
                 </a>
@@ -19,7 +19,7 @@
                 </a>
 
                 <div class="sidenav-menu-heading">Master</div>
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="{{ route('dashboard.users.index') }}">
                     <div class="nav-link-icon"><i data-feather="users"></i></div>
                     User
                 </a>

@@ -21,7 +21,8 @@ return new class extends Migration
             $table->string('avatar')->nullable();
             $table->bigInteger('point')->default(0);
             $table->string('forgot')->nullable();
-            $table->integer('role');
+            $table->integer('role')->comment('0: Buyyer, 1: Admin');
+            $table->integer('status')->default(1)->comment('1: Active, 0: Nonactive');
             $table->timestamps();
             $table->softDeletes();
         });

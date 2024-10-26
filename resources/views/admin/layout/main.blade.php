@@ -22,14 +22,19 @@
 
                 @yield('content')
 
+                
             </main>
             
             @include('admin.layout.component._footer')
-
+            
         </div>
     </div>
 
+    @yield('modal')
+    
     @include('admin.layout._js')
+
+    @stack('custom')
 
 </body>
 
