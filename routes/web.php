@@ -2,11 +2,28 @@
 
 use App\Http\Controllers\Admin\Master\UserController;
 use App\Http\Controllers\Admin\OverviewController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('dashboard')->name('dashboard.')->group(function () {
+Route::prefix('auth')->name('auth.')->group(function () {
 
-    Route::get('/overview', [OverviewController::class, 'index'])->name('index');
+    Route::middleware('guest')->group(function () {
+        Route::get('login', [AuthController::class, 'login'])->name('login');
+        Route::post('login', [AuthController::class, 'store'])->name('login');
+        Route::get('register', [AuthController::class, 'register'])->name('register');
+        Route::post('register', [AuthController::class, 'storeRegister'])->name('register');
+    });
+
+    Route::middleware('auth')->group(function () {
+        
+        Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+    });
+});
+
+
+Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(function () {
+
+    Route::get('/overview', [OverviewController::class, 'index'])->name('overview');
 
     Route::prefix('users')->name('users.')->group(function () {
 

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('phone');
-            $table->text('address');
+            $table->text('address')->nullable();
             $table->string('avatar')->nullable();
             $table->bigInteger('point')->default(0);
             $table->string('forgot')->nullable();

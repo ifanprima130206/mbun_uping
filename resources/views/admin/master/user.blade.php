@@ -142,12 +142,6 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="mb-3 row">
-                            <label for="address" class="col-sm-2 col-form-label">Alamat</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" id="address" rows="5" name="address" placeholder="Masukkan Alamat"></textarea>
-                            </div>
-                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -211,12 +205,6 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="mb-3 row">
-                            <label for="address" class="col-sm-2 col-form-label">Alamat</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" id="address" rows="5" name="address" placeholder="Masukkan Alamat"></textarea>
-                            </div>
-                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -229,5 +217,5 @@
 @endsection
 
 @push('custom')
-    <script src="{{ url('assets/admin/custom/js/user.js') }}"></script>
+    <script src="{{ url('assets/admin/custom/js/master/user.js') }}"></script>
 @endpush

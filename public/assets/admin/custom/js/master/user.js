@@ -12,7 +12,7 @@ $(document).ready(function () {
     $(".add").on("click", function () {
         var button = $(this);
         button.prop("disabled", true);
-        button.find("span").text("Loading...");
+        button.find("span").text("Memuat...");
         var modalId = "#addModal";
         var formData = new FormData();
         var url = $(this).data("url");
@@ -106,7 +106,7 @@ $(document).ready(function () {
         e.preventDefault();
         var button = $(this);
         button.prop("disabled", true);
-        button.find("span").text("Loading...");
+        button.find("span").text("Memuat...");
 
         let url = $(this).data("url");
 

@@ -29,7 +29,6 @@ class UserController extends Controller
             'phone' => $data['phone'],
             'password' => Hash::make($data['password']),
             'role' => $data['role'],
-            'address' => $data['address'],
         ]);
 
         return response()->json([
@@ -48,7 +47,6 @@ class UserController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
-            'address' => $data['address'],
         ];
 
         if (isset($data['role'])) {

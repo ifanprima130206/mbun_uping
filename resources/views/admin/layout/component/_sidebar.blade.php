@@ -3,18 +3,18 @@
         <div class="sidenav-menu">
             <div class="nav accordion" id="accordionSidenav">
                 <div class="sidenav-menu-heading">Dasbor</div>
-                <a class="nav-link" href="{{ route('dashboard.index') }}">
+                <a class="nav-link" href="{{ route('dashboard.overview') }}">
                     <div class="nav-link-icon"><i data-feather="grid"></i></div>
                     Ikhtisar
                 </a>
 
                 <div class="sidenav-menu-heading">Manajemen</div>
                 <a class="nav-link" href="charts.html">
-                    <div class="nav-link-icon"><i data-feather="trending-up"></i></div>
+                    <div class="nav-link-icon"><i data-feather="corner-down-left"></i></div>
                     Pemasukan
                 </a>
                 <a class="nav-link" href="charts.html">
-                    <div class="nav-link-icon"><i data-feather="trending-down"></i></div>
+                    <div class="nav-link-icon"><i data-feather="corner-down-right"></i></div>
                     Pengeluaran
                 </a>
 

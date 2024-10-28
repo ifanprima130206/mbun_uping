@@ -38,7 +38,6 @@ class UserRequest extends FormRequest
                 ? 'nullable|string|min:8|regex:/^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\W_]).{8,}$/'
                 : 'required|string|min:8|regex:/^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\W_]).{8,}$/',
             'role' => 'required|in:0,1',
-            'address' => 'required|string',
         ];
     }
 
@@ -67,10 +66,6 @@ class UserRequest extends FormRequest
 
             'role.required' => 'Role wajib dipilih.',
             'role.in' => 'Role yang dipilih tidak valid.',
-
-            'address.required' => 'Alamat wajib diisi.',
-            'address.string' => 'Alamat harus berupa teks.',
-            'address.max' => 'Alamat tidak boleh lebih dari 500 karakter.',
         ];
     }
 }
