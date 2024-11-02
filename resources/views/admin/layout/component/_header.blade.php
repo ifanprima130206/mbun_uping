@@ -123,8 +123,8 @@
                     <img class="dropdown-user-img"
                         src="{{ url('assets/admin') }}/assets/img/illustrations/profiles/profile-1.png" />
                     <div class="dropdown-user-details">
-                        <div class="dropdown-user-details-name">Valerie Luna</div>
-                        <div class="dropdown-user-details-email">vluna@aol.com</div>
+                        <div class="dropdown-user-details-name">{{ Auth::user()->name }}</div>
+                        <div class="dropdown-user-details-email">{{ Auth::user()->email }}</div>
                     </div>
                 </h6>
                 <div class="dropdown-divider"></div>

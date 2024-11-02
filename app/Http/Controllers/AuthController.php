@@ -29,7 +29,7 @@ class AuthController extends Controller
         if (auth()->attempt($request->only('email', 'password'))) {
             return response()->json([
                 'success' => true,
-                'message' => 'Login berhasil, anda akan diarahkan ke halaman dashboard...',
+                'message' => 'Login berhasil, anda akan diarahkan ke halaman dashboard.',
                 'redirect_url' => route('dashboard.overview'),
             ]);
         }
