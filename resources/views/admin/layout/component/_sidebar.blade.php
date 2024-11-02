@@ -24,7 +24,7 @@
                         <div class="nav-link-icon"><i data-feather="users"></i></div>
                         User
                     </a>
-                    <a class="nav-link" href="charts.html">
+                    <a class="nav-link" href="{{ route('dashboard.products.index') }}">
                         <div class="nav-link-icon"><i data-feather="package"></i></div>
                         Produk
                     </a>

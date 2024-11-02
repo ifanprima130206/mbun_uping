@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Master\ProductController;
 use App\Http\Controllers\Admin\Master\UserController;
 use App\Http\Controllers\Admin\OverviewController;
 use App\Http\Controllers\AuthController;
@@ -33,5 +34,10 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(functi
         Route::delete('/destroy/{user_id}', [UserController::class, 'destroy'])->name('destroy');
         Route::put('/activated/{user_id}', [UserController::class, 'activated'])->name('activated');
         Route::put('/disactivated/{user_id}', [UserController::class, 'disactivated'])->name('disactivated');
+    });
+
+    Route::prefix('products')->name('products.')->group(function () {
+        
+        Route::get('/', [ProductController::class, 'index'])->name('index');
     });
 });

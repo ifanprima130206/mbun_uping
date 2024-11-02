@@ -24,6 +24,16 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+
+        Schema::create('order_products', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('order_id');
+            $table->foreignId('product_id');
+            $table->integer('variant_id');
+            $table->integer('qty');
+            $table->bigInteger('price');
+            $table->timestamps();
+        });
     }
 
     /**
